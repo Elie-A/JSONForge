@@ -1,0 +1,26 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "type": "object",
+    "properties": {
+      "user": {
+        "type": "object",
+        "properties": {
+          "id": { "type": "integer" },
+          "username": { "type": "string", "pattern": "^[a-zA-Z0-9_-]{3,16}$" },
+          "email": { "type": "string", "format": "email", "default": "default@mail.com", "useDefault": true},
+          "profile": {
+            "type": "object",
+            "properties": {
+              "name": { "type": "string", "length": 5 },
+              "age": { "type": "integer", "minimum": 18, "maximum": 150 },
+              "city": { "type": "string", "length": 20 }
+            },
+            "required": ["name", "age", "city"]
+          }
+        },
+        "required": ["id", "username", "email", "profile"]
+      }
+    },
+    "required": ["user"]
+  }
+  
