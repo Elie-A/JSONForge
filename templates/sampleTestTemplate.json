@@ -6,19 +6,20 @@
         "type": "object",
         "properties": {
           "id": { "type": "integer" },
-          "username": { "type": "string", "pattern": "^[a-zA-Z0-9_-]{3,16}$" },
-          "email": { "type": "string", "format": "email", "default": "default@mail.com", "useDefault": true},
+          "username": { "type": "string", "pattern": "^[A-Za-z]{3,16}$" },
+          "email": { "type": "string", "format": "email", "default": "default@mail.com", "useDefault": false},
+          "work_email": { "type": "string", "format": "email", "default": "defaultWork@mail.com", "useDefault": true},
+          "phone_number": {"type": "string", "format": "phone"},
           "profile": {
             "type": "object",
             "properties": {
               "name": { "type": "string", "length": 5 },
               "age": { "type": "integer", "minimum": 18, "maximum": 150 },
-              "city": { "type": "string", "length": 20 }
-            },
-            "required": ["name", "age", "city"]
+              "city": { "type": "string", "length": 20 },
+              "dob": {"type": "date", "format": "YYYY-MMM-DD", "default": "1999-01-01", "useDefault": false}
+            }
           }
-        },
-        "required": ["id", "username", "email", "profile"]
+        }
       }
     },
     "required": ["user"]
