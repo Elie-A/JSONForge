@@ -9,7 +9,7 @@ This script is a JSON file generator based on a custom json schema
 
 ## Library Usage
 
-- Execute this command to install the library `npm i json-forge`
+- Execute this command to install the library `npm i jsonforger`
 - Import these 2 functions:
   - `readAndSaveSchema` This function, parses the JSON schema file from a given file path, parses its contents into a JavaScript object, and returns the parsed object. If there's an error during this process, it catches the error, logs it, and returns null.
   - `generateJsonFromSchema` This function, generateJsonFromSchema, takes a propertySchema object and an array of propertyPath as input and generates JSON data based on the schema provided. Let's break down how it works:
