@@ -2,7 +2,7 @@
   "name": "jsonforger",
   "version": "1.0.1",
   "description": "json generator",
-  "main": "index.js",
+  "main": "index.ts",
   "scripts": {
     "e2e": "npx jest tests/e2e",
     "integration": "npx jest tests/integration"
