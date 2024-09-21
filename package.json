@@ -1,6 +1,6 @@
 {
   "name": "jsonforger",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "json generator",
   "main": "index.ts",
   "scripts": {
